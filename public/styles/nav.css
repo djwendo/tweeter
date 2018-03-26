@@ -1,0 +1,25 @@
+#nav-bar {
+  height: 80px;
+  width: 100%;
+  background-color: #00a087;
+  padding: 0px 2em;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+
+#nav-bar .logo {
+  height: 80px;
+  width: 80px;
+  vertical-align: middle;
+}
+
+
+#nav-bar .header {
+  color: #e8fdff;
+  font-size: 2em;
+  height: 80px;
+  vertical-align: middle;
+}
