@@ -18,7 +18,7 @@ article:hover header {
   border-radius: 5px 5px 0px 0px;
 }
 
-article:hover .userImg {
+article:hover .avatar {
   float: left;
   background-color: white;
   border-radius: 5px;
@@ -56,8 +56,7 @@ article header {
   border-radius: 5px 5px 0px 0px;
 }
 
-
-article .userImg {
+article .avatar {
   float: left;
   background-color: white;
   border-radius: 5px;
@@ -74,8 +73,6 @@ article .userName {
   margin: 5px 3px;
   font-size: 175%;
 }
-
-
 
 article .userHandle {
   float: right;
