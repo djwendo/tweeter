@@ -1,0 +1,110 @@
+article {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 2em;
+  z-index: -1;
+}
+
+article:hover {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 2em;
+  z-index: -1;
+}
+
+article:hover header {
+  background-color: #eee;
+  color: #244751;
+  border-radius: 5px 5px 0px 0px;
+}
+
+article:hover .userImg {
+  float: left;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0.5em;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+}
+
+article:hover .userName {
+  float: left;
+  color: #244751;
+  margin: 5px 3px;
+  font-size: 175%;
+}
+
+article:hover .userHandle {
+  float: right;
+  padding-right: 8px;
+  color: #5f5d5d;
+}
+
+article:hover .icon {
+  float: right;
+  width: 15px;
+  height: 15px;
+  margin: 10px 7px;
+  color: #00a087;
+}
+
+article header {
+  background-color: #eeeeee8c;
+  height: 65px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+
+article .userImg {
+  float: left;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0.5em;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  opacity: .75;
+}
+
+article .userName {
+  float: left;
+  color: #244751a8;
+  margin: 5px 3px;
+  font-size: 175%;
+}
+
+
+
+article .userHandle {
+  float: right;
+  padding-right: 8px;
+  color: grey;
+}
+
+article .tweetText {
+  text-align: left;
+  padding: 20px 10px 20px 10px;
+}
+
+article footer {
+  border-top: 0.5px solid lightgrey;
+  height: 35px;
+}
+
+article .footerText {
+  float: left;
+  margin-left: 10px;
+  vertical-align: middle;
+  font-size: 75%;
+}
+
+article .icon {
+  float: right;
+  width: 15px;
+  height: 15px;
+  margin: 10px 7px;
+  color: #ffffff;
+}
+
