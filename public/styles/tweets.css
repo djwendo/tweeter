@@ -83,6 +83,7 @@ article .userHandle {
 article .tweetText {
   text-align: left;
   padding: 20px 10px 20px 10px;
+  overflow-wrap: break-word;
 }
 
 article footer {
