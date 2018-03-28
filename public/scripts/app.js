@@ -72,9 +72,9 @@ const data = [
 $(() => {
 
   function renderTweets(tweets) {
-    for (eachTweet in tweets) {
-      let tweet = tweets[eachTweet];
-      createTweetElement(tweet);
+    for (let tweet of tweets) {
+      let newTweet = createTweetElement(tweet);
+      $('#tweets-container').append(newTweet);
     }
   }
 
@@ -83,10 +83,7 @@ $(() => {
     let handle = tweet.user.handle;
     let avatar = tweet.user.avatars.small
     let text = tweet.content.text
-    let day = new Date(tweet.created_at);
-    let today = new Date();
-    let oneDay = 24*60*60*1000
-    let days = Math.round(Math.abs((day-today)/oneDay)) + ' days ago'
+    let time = moment(tweet.created_at).fromNow();
 
     let $tweet = $('<article>').addClass('tweet');
 
@@ -115,9 +112,8 @@ $(() => {
     let $footer = $('<footer>');
     $tweet.append($footer);
 
-    let $days = $('<p>').addClass('footerText');
-    $days.text(days);
-    $footer.append($days);
+    let $time = $('<p>').addClass('footerText').text(time);
+    $footer.append($time);
 
     let $iconHeart = $('<i>').addClass('icon fas fa-heart');
     $footer.append($iconHeart);
@@ -128,11 +124,10 @@ $(() => {
     let $iconFlag = $('<li>').addClass('icon fas fa-flag');
     $footer.append($iconFlag);
 
-    $('#tweets-container').append($tweet);
     return $tweet;
   }
 
-renderTweets(data);
+  renderTweets(data);
 })
 
 
