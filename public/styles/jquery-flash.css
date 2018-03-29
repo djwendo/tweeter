@@ -1,0 +1,29 @@
+/* ============================================================================== */
+/* = jQUERY FLASH PLUGIN CSS                                                    = */
+/* ============================================================================== */
+#flash{
+  cursor: default;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #00a087;
+  color: #ffffff;
+  width: 75%;
+  padding: 25px 20px;
+  margin: 0;
+  font-size: 1.5em;
+  text-align: center;
+  border: none;
+  border-radius:5px 5px 0 0;
+  overflow-wrap: break-word;
+}
+
+#flash div.flash_close{
+  top:-6px;
+  right:-6px;
+  position:absolute;
+  height:30px;
+  width:30px;
+  background:url('/images/close.png') top left no-repeat;
+  cursor: default;
+}

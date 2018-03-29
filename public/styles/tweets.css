@@ -33,7 +33,7 @@ article:hover .userName {
   float: left;
   color: #244751;
   margin: 5px 3px;
-  font-size: 175%;
+  font-size: 160%;
 }
 
 article:hover .userHandle {
@@ -71,7 +71,7 @@ article .userName {
   float: left;
   color: #244751a8;
   margin: 5px 3px;
-  font-size: 175%;
+  font-size: 160%;
 }
 
 article .userHandle {
