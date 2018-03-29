@@ -24,3 +24,28 @@
   height: 80px;
   vertical-align: middle;
 }
+
+#nav-bar #compose-button {
+  float: right;
+  border-radius: 5px;
+  width: 110px;
+  height: 75%;
+  margin-top: 10px;
+  border: 1px solid #244751;
+  color: #00a087;
+  background-color: #ffffff;
+  opacity: .85;
+}
+
+#nav-bar #compose-button:hover {
+  float: right;
+  border-radius: 5px;
+  width: 110px;
+  height: 75%;
+  margin-top: 10px;
+  border: 1px solid #244751;
+  color: #244751;
+  background-color: #ffffff;
+  opacity: 1;
+  cursor: pointer;
+}
