@@ -28,19 +28,19 @@
 #nav-bar #compose-button {
   float: right;
   border-radius: 5px;
-  width: 110px;
+  width: 115px;
   height: 75%;
   margin-top: 10px;
   border: 1px solid #244751;
   color: #00a087;
   background-color: #ffffff;
-  opacity: .85;
+  opacity: .9;
 }
 
 #nav-bar #compose-button:hover {
   float: right;
   border-radius: 5px;
-  width: 110px;
+  width: 115px;
   height: 75%;
   margin-top: 10px;
   border: 1px solid #244751;
@@ -48,4 +48,17 @@
   background-color: #ffffff;
   opacity: 1;
   cursor: pointer;
+}
+
+#compose-button .compose-icon {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 0px 5px;
+  vertical-align: middle
+}
+
+#compose-button span {
+  float: right;
+  margin: 2px;
 }

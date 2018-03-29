@@ -23,6 +23,7 @@ $(() => {
     let tweetLength = tweetText.length
     if (tweetLength > 0 && tweetLength <= 140) {
       $.post('/tweets/', data).done((response) => {
+        $('#compose-tweet .counter').text('140');
         $('#compose-tweet textarea').val('');
         loadTweets();
       });
@@ -89,7 +90,6 @@ $(() => {
 
     return $tweet;
   }
-
 })
 
 

@@ -32,7 +32,7 @@ article:hover .avatar {
 article:hover .userName {
   float: left;
   color: #244751;
-  margin: 5px 3px;
+  margin: 5px 2px;
   font-size: 160%;
 }
 
@@ -70,7 +70,7 @@ article .avatar {
 article .userName {
   float: left;
   color: #244751a8;
-  margin: 5px 3px;
+  margin: 5px 2px;
   font-size: 160%;
 }
 

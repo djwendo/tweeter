@@ -23,6 +23,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/compose-toggle.js"></script>
 
     <!-- Moment library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
@@ -41,7 +42,10 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png" >
       <span class="header">Tweeter</span>
-      <button id="compose-button" type="submit">Compose</button>
+      <button id="compose-button" type="submit">
+          <i class="compose-icon far fa-edit"></i>
+          <span>Compose</span>
+      </button>
     </nav>
 
     <!-- Page-specific (main) content here -->
