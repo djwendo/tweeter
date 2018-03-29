@@ -9,7 +9,7 @@ $(() => {
 
 
   function loadTweets() {
-    $.get('/tweets').done((tweets) => {
+    $.get('/tweets/').done((tweets) => {
       renderTweets(tweets);
     })
   }
@@ -23,15 +23,15 @@ $(() => {
     let tweetLength = tweetText.length
     if (tweetLength > 0 && tweetLength <= 140) {
       $.post('/tweets/', data).done((response) => {
-
+        $('#compose-tweet textarea').val('');
+        loadTweets();
       });
-      $('#compose-tweet textarea').val('')
-      loadTweets();
     } else if (data && tweetLength > 140) {
-      $.flash(`"Brevity is the soul of wit." &mdash; William Shakespeare. If you want more than 140 characters, write a blog.`);
+      $.flash(`"Brevity is the soul of wit." &mdash; Shakespeare </br> If you want more than 140 characters, write a blog.`);
     } else if (tweetLength === 0) {
       $.flash('I think you forgot something... Your tweet is empty.');
     }
+
   })
 
   function renderTweets(tweets) {
