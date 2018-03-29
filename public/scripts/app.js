@@ -9,12 +9,16 @@ $(() => {
 
 
   function loadTweets() {
-    $.get('/tweets/').done((tweets) => {
-      renderTweets(tweets);
+    $.get('/tweets/').done((content) => {
+      renderTweets(content);
     })
   }
 
   loadTweets();
+
+
+  //Logic related to "valid" tweets, including flash messages
+  //for errors when tweet is empty or too long.
 
   $('#compose-tweet').submit(function(e) {
     e.preventDefault();
@@ -28,21 +32,22 @@ $(() => {
         loadTweets();
       });
     } else if (data && tweetLength > 140) {
-      $.flash(`"Brevity is the soul of wit." &mdash; Shakespeare </br> If you want more than 140 characters, write a blog.`);
+      $.flash(`"Brevity is the soul of wit." &mdash; Shakespeare <br/> If you want more than 140 characters, write a blog.`);
     } else if (tweetLength === 0) {
       $.flash('I think you forgot something... Your tweet is empty.');
     }
 
   })
 
-  function renderTweets(tweets) {
-    for (let tweet of tweets) {
+  function renderTweets(data) {
+    for (let tweet of data) {
       let newTweet = createTweetElement(tweet);
       $('#tweets-container').prepend(newTweet);
     }
   }
 
   function createTweetElement(tweet) {
+    if (tweet.user === undefined) console.log(tweet);
     let username = tweet.user.name;
     let handle = tweet.user.handle;
     let avatar = tweet.user.avatars.small

@@ -1,3 +1,5 @@
+//Implements character counter on input data.
+
 $(document).ready(function() {
   $('textarea').on('input', function() {
     var count = $(this).val().length;
