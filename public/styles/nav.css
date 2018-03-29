@@ -28,9 +28,10 @@
 #nav-bar #compose-button {
   float: right;
   border-radius: 5px;
-  width: 115px;
+  width: 125px;
   height: 75%;
   margin-top: 10px;
+  margin-right: 1em;
   border: 1px solid #244751;
   color: #00a087;
   background-color: #ffffff;
@@ -40,9 +41,10 @@
 #nav-bar #compose-button:hover {
   float: right;
   border-radius: 5px;
-  width: 115px;
+  width: 125px;
   height: 75%;
   margin-top: 10px;
+  margin-right: 1em;
   border: 1px solid #244751;
   color: #244751;
   background-color: #ffffff;
@@ -55,10 +57,10 @@
   width: 20px;
   height: 20px;
   margin: 0px 5px;
-  vertical-align: middle
 }
 
 #compose-button span {
   float: right;
-  margin: 2px;
+  font-size: 125%;
+  margin: 0px 2px
 }
