@@ -2,15 +2,15 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-Combining front-end, user-focused, styling with a back-end application, server, and database, this project utilizes HTML, CSS, JS, jQuery, AJAX, Node, Express and MongoDB.
+Combining user-focused, front-end development with back-end application, server, and database software, this project utilizes HTML, CSS, JS, jQuery, AJAX, Node, Express and MongoDB.
 
 ## Final Product
 
-!["Screenshot of Tweeter"](https://github.com/djwendo/)
-!["Toggle Compose and hover on Compose"](https://github.com/djwendo/)
-!["Hover on tweet"](https://github.com/djwendo/)
-!["Flash Message for empty tweet"](https://github.com/djwendo/)
-!["Flash Message when tweet is too long"](https://github.com/djwendo/)
+!["Screenshot of Tweeter"](https://github.com/djwendo/tweeter/blob/master/README%20images/tweeter-landing-page.png?raw=true)
+!["Toggle Compose and hover on Compose"](https://github.com/djwendo/tweeter/blob/master/README%20images/toggle-compose.png?raw=true)
+!["Hover on tweet"](https://github.com/djwendo/tweeter/blob/master/README%20images/tweet-hover.png?raw=true)
+!["Flash Message for empty tweet"](https://github.com/djwendo/tweeter/blob/master/README%20images/flash-message-empty-tweet.png?raw=true)
+!["Flash Message when tweet is too long"](https://github.com/djwendo/tweeter/blob/master/README%20images/flash-message-long-tweet.png?raw=true)
 
 ## Getting Started
 
