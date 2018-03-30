@@ -4,4 +4,5 @@ node_modules/
 simulate-delay
 in-memory-db
 initial-tweets
-/.github
+.github
+data-files
