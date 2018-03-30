@@ -1,3 +1,7 @@
 node_modules/
 .env
 .DS_Store
+simulate-delay
+in-memory-db
+initial-tweets
+/.github

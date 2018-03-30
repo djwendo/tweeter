@@ -29,7 +29,7 @@
           });
 
         $(document).click(function(){
-          flash.animate({top: ($(window).height()+50)+'px', opacity: 0}, fast);
+          flash.animate({top: ($(window).height()+50)+'px', opacity: 0});
         });
       }
     });

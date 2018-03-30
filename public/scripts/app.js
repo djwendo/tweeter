@@ -19,7 +19,6 @@ $(() => {
 
   //Logic related to "valid" tweets, including flash messages
   //for errors when tweet is empty or too long.
-
   $('#compose-tweet').submit(function(e) {
     e.preventDefault();
     let data = $(e.target).serialize();
@@ -29,6 +28,7 @@ $(() => {
       $.post('/tweets/', data).done((response) => {
         $('#compose-tweet .counter').text('140');
         $('#compose-tweet textarea').val('');
+        $("#tweets-container").empty;
         loadTweets();
       });
     } else if (data && tweetLength > 140) {

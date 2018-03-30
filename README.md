@@ -2,7 +2,15 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+Combining front-end, user-focused, styling with a back-end application, server, and database, this project utilizes HTML, CSS, JS, jQuery, AJAX, Node, Express and MongoDB.
+
+## Final Product
+
+!["Screenshot of Tweeter"](https://github.com/djwendo/)
+!["Toggle Compose and hover on Compose"](https://github.com/djwendo/)
+!["Hover on tweet"](https://github.com/djwendo/)
+!["Flash Message for empty tweet"](https://github.com/djwendo/)
+!["Flash Message when tweet is too long"](https://github.com/djwendo/)
 
 ## Getting Started
 
@@ -15,3 +23,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- chance
+- md5
+- mongodb
