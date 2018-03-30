@@ -6,11 +6,11 @@ Combining user-focused, front-end development with back-end application, server,
 
 ## Final Product
 
-!["Screenshot of Tweeter"](https://github.com/djwendo/tweeter/blob/master/README%20images/tweeter-landing-page.png?raw=true)
-!["Toggle Compose and hover on Compose"](https://github.com/djwendo/tweeter/blob/master/README%20images/toggle-compose.png?raw=true)
-!["Hover on tweet"](https://github.com/djwendo/tweeter/blob/master/README%20images/tweet-hover.png?raw=true)
-!["Flash Message for empty tweet"](https://github.com/djwendo/tweeter/blob/master/README%20images/flash-message-empty-tweet.png?raw=true)
-!["Flash Message when tweet is too long"](https://github.com/djwendo/tweeter/blob/master/README%20images/flash-message-long-tweet.png?raw=true)
+!["Screenshot of Tweeter"](https://github.com/djwendo/tweeter/blob/master/docs/tweeter-landing-page.png?raw=true)
+!["Toggle Compose and hover on Compose"](https://github.com/djwendo/tweeter/blob/master/docs/toggle-compose.png?raw=true)
+!["Hover on tweet"](https://github.com/djwendo/tweeter/blob/master/docs/tweet-hover.png?raw=true)
+!["Flash Message for empty tweet"](https://github.com/djwendo/tweeter/blob/master/docs/flash-message-empty-tweet.png?raw=true)
+!["Flash Message when tweet is too long"](https://github.com/djwendo/tweeter/blob/master/docs/flash-message-long-tweet.png?raw=true)
 
 ## Getting Started
 
