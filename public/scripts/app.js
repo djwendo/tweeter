@@ -1,12 +1,60 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-
 $(() => {
 
+  function createTweetElement(tweet) {
+    const username = tweet.user.name;
+    const handle = tweet.user.handle;
+    const avatar = tweet.user.avatars.small
+    const text = tweet.content.text
+    const time = moment(tweet.created_at).fromNow();
+
+    const $tweet = $('<article>').addClass('tweet');
+
+    const $header = $('<header>');
+    $tweet.append($header);
+
+    const $avatar = $('<img>').addClass('avatar')
+    $avatar.attr('src', avatar);
+    $header.append($avatar);
+
+    const $username = $('<h3>').addClass('userName');
+    $username.text(username);
+    $header.append($username);
+
+    const $handle = $('<p>').addClass('userHandle');
+    $handle.text(handle);
+    $header.append($handle);
+
+    const $content = $('<content>')
+    $tweet.append($content);
+
+    const $text = $('<p>').addClass('tweetText');
+    $text.text(text);
+    $content.append($text);
+
+    const $footer = $('<footer>');
+    $tweet.append($footer);
+
+    const $time = $('<p>').addClass('footerText').text(time);
+    $footer.append($time);
+
+    const $iconHeart = $('<i>').addClass('icon fas fa-heart');
+    $footer.append($iconHeart);
+
+    const $iconRT = $('<i>').addClass('icon fas fa-retweet');
+    $footer.append($iconRT);
+
+    const $iconFlag = $('<li>').addClass('icon fas fa-flag');
+    $footer.append($iconFlag);
+
+    return $tweet;
+  }
+
+  function renderTweets(data) {
+    for (let tweet of data) {
+      const newTweet = createTweetElement(tweet);
+      $('#tweets-container').prepend(newTweet);
+    }
+  }
 
   function loadTweets() {
     $.get('/tweets/').done((content) => {
@@ -14,87 +62,27 @@ $(() => {
     })
   }
 
-  loadTweets();
-
-
-  //Logic related to "valid" tweets, including flash messages
-  //for errors when tweet is empty or too long.
   $('#compose-tweet').submit(function(e) {
     e.preventDefault();
-    let data = $(e.target).serialize();
-    let tweetText = data.slice(5);
-    let tweetLength = tweetText.length
-    if (tweetLength > 0 && tweetLength <= 140) {
-      $.post('/tweets/', data).done((response) => {
+    let text = $(this).find('textarea').val().trim();
+    console.log('text is',text);
+    if (text.length > 0 && text.length <= 140) {
+      $.post('/tweets/', {text}).done((response) => {
         $('#compose-tweet .counter').text('140');
         $('#compose-tweet textarea').val('');
-        $("#tweets-container").empty;
+        $('#tweets-container').empty();
         loadTweets();
       });
-    } else if (data && tweetLength > 140) {
+    } else if (text && text.length > 140) {
       $.flash(`"Brevity is the soul of wit." &mdash; Shakespeare <br/> If you want more than 140 characters, write a blog.`);
-    } else if (tweetLength === 0) {
-      $.flash('I think you forgot something... Your tweet is empty.');
+    } else if (text.length === 0) {
+      $('#compose-tweet textarea').val('');
+      $.flash('I think you forgot something... Your tweet looks empty.');
     }
-
   })
 
-  function renderTweets(data) {
-    for (let tweet of data) {
-      let newTweet = createTweetElement(tweet);
-      $('#tweets-container').prepend(newTweet);
-    }
-  }
 
-  function createTweetElement(tweet) {
-    if (tweet.user === undefined) console.log(tweet);
-    let username = tweet.user.name;
-    let handle = tweet.user.handle;
-    let avatar = tweet.user.avatars.small
-    let text = tweet.content.text
-    let time = moment(tweet.created_at).fromNow();
-
-    let $tweet = $('<article>').addClass('tweet');
-
-    let $header = $('<header>');
-    $tweet.append($header);
-
-    let $avatar = $('<img>').addClass('avatar')
-    $avatar.attr('src', avatar);
-    $header.append($avatar);
-
-    let $username = $('<h3>').addClass('userName');
-    $username.text(username);
-    $header.append($username);
-
-    let $handle = $('<p>').addClass('userHandle');
-    $handle.text(handle);
-    $header.append($handle);
-
-    let $content = $('<content>')
-    $tweet.append($content);
-
-    let $text = $('<p>').addClass('tweetText');
-    $text.text(text);
-    $content.append($text);
-
-    let $footer = $('<footer>');
-    $tweet.append($footer);
-
-    let $time = $('<p>').addClass('footerText').text(time);
-    $footer.append($time);
-
-    let $iconHeart = $('<i>').addClass('icon fas fa-heart');
-    $footer.append($iconHeart);
-
-    let $iconRT = $('<i>').addClass('icon fas fa-retweet');
-    $footer.append($iconRT);
-
-    let $iconFlag = $('<li>').addClass('icon fas fa-flag');
-    $footer.append($iconFlag);
-
-    return $tweet;
-  }
+  loadTweets();
 })
 
 

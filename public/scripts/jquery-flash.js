@@ -1,6 +1,4 @@
-//
 // jQuery Flash plugin v1.0
-//
 //  - Created by Joel Moss at Codaset (joel@codaset.com)
 //  - http://codaset.com/codaset/jquery-flash
 

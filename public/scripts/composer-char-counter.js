@@ -1,9 +1,9 @@
-//Implements character counter on input data.
+//Implements character counter on tweet input data.
 
 $(document).ready(function() {
   $('textarea').on('input', function() {
-    var count = $(this).val().length;
-    var charCounter = $(this).parent().find(".counter");
+    const count = $(this).val().length;
+    const charCounter = $(this).parent().find(".counter");
     charCounter.text(140 - count);
     if (count > 140) {
       $(".counter").css("color", "#ff0000");
